@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Your Name] — Research &amp; Engineering</title>
+  <meta
+    name="description"
+    content="Research at the intersection of space autonomy and computational physics — astrodynamics, GNC, autonomous space robotics, and theoretical &amp; computational physics."
+  />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="[Your Name] — Research &amp; Engineering" />
+  <meta
+    property="og:description"
+    content="Space autonomy and computational physics: astrodynamics, GNC, and scientific computing."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="#top">
+        <span class="nav__mark" aria-hidden="true"></span>
+        <span class="nav__name">[Your Name]</span>
+      </a>
+
+      <button
+        class="nav__toggle"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Open menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" aria-label="Switch to light theme" title="Toggle theme">
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M16.9 16.9l2.1 2.1M19.1 4.9l-2.1 2.1M7 17l-2.1 2.1" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__orbits" aria-hidden="true">
+        <div class="orbit orbit--1"><span class="orbit__body"></span></div>
+        <div class="orbit orbit--2"><span class="orbit__body"></span></div>
+        <div class="orbit orbit--3"><span class="orbit__body"></span></div>
+        <div class="hero__star"></div>
+      </div>
+
+      <div class="hero__inner">
+        <p class="hero__eyebrow">[Your Name] / Research &amp; Engineering</p>
+        <h1 class="hero__title" id="hero-title">
+          Research at the intersection of
+          <span class="hero__accent">space autonomy</span> and
+          <span class="hero__accent">computational physics</span>
+        </h1>
+        <p class="hero__lede">
+          Engineering student finishing a French generalist engineering degree and a master's at
+          Seoul National University, with lab research in autonomous robotics. Building depth in
+          astrodynamics, guidance &amp; control, and scientific computing.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#projects">View projects</a>
+          <a class="btn btn--ghost" href="#cv">Read CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section__head">
+        <span class="section__index">01</span>
+        <h2 class="section__title" id="about-title">About</h2>
+      </div>
+      <div class="about">
+        <div class="about__lead">
+          <p>
+            I am building a <strong>&pi;-shaped profile</strong>: two pillars of depth connected
+            by mathematics, scientific computing, and scientific machine learning. My priority is
+            demonstrable expertise — being able to design, explain, validate, and critique my own
+            work — rather than collecting credentials.
+          </p>
+          <p>
+            My background spans a French <em>classe préparatoire</em>, an exchange in the United
+            States in aerospace and modern physics, and a specialization in materials and
+            processes. My main lab work starts with reproducing SkyJEPA in autonomous drone
+            research.
+          </p>
+        </div>
+        <ul class="about__facts">
+          <li>
+            <span class="about__fact-label">Current</span>
+            Double degree — French engineering school &amp; SNU master's
+          </li>
+          <li>
+            <span class="about__fact-label">Lab</span>
+            Autonomous robotics research (SkyJEPA reproduction)
+          </li>
+          <li>
+            <span class="about__fact-label">Focus</span>
+            Astrodynamics · GNC · computational physics
+          </li>
+          <li>
+            <span class="about__fact-label">Goal</span>
+            Scientific research roles, with a PhD as a later option
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== RESEARCH ===================== -->
+    <section class="section section--alt" id="research" aria-labelledby="research-title">
+      <div class="section__head">
+        <span class="section__index">02</span>
+        <h2 class="section__title" id="research-title">Research</h2>
+      </div>
+      <p class="section__intro">
+        Two long-term directions — stated as goals I am working toward, not expertise already
+        acquired. Mathematics and scientific computing are the bridge between them.
+      </p>
+      <div class="pillars">
+        <article class="pillar">
+          <div class="pillar__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" /><ellipse cx="24" cy="24" rx="20" ry="9" /><ellipse cx="24" cy="24" rx="20" ry="9" transform="rotate(60 24 24)" /></svg>
+          </div>
+          <h3 class="pillar__title">Space engineering &amp; autonomy</h3>
+          <p class="pillar__desc">
+            Astrodynamics, orbital mechanics, guidance, navigation &amp; control, and autonomous
+            space robotics. From two-body dynamics to attitude estimation and control under
+            uncertainty.
+          </p>
+          <ul class="pillar__tags">
+            <li>Astrodynamics</li>
+            <li>GNC</li>
+            <li>Space robotics</li>
+          </ul>
+        </article>
+
+        <article class="pillar">
+          <div class="pillar__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="3" /><path d="M24 6c-7 8-7 28 0 36M24 6c7 8 7 28 0 36M6 24c8-7 28-7 36 0M6 24c8 7 28 7 36 0" /></svg>
+          </div>
+          <h3 class="pillar__title">Theoretical &amp; computational physics</h3>
+          <p class="pillar__desc">
+            Classical and Hamiltonian mechanics, modern physics, and numerical simulation —
+            studying invariants, convergence, and the limits of models rather than treating
+            simulation as measured truth.
+          </p>
+          <ul class="pillar__tags">
+            <li>Mechanics</li>
+            <li>Relativity</li>
+            <li>Scientific computing</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section__head">
+        <span class="section__index">03</span>
+        <h2 class="section__title" id="projects-title">Projects</h2>
+      </div>
+      <p class="section__intro">
+        Each project is paired with a repository as the source of truth and a research project
+        page. Statuses are honest: a project advances only when its equations can be derived, its
+        assumptions explained, and its results reproduced.
+      </p>
+
+      <div class="projects">
+        <article class="project">
+          <div class="project__top">
+            <h3 class="project__title">SkyJEPA</h3>
+            <span class="status status--active">Research in progress</span>
+          </div>
+          <p class="project__desc">
+            Reproduction of SkyJEPA for autonomous flight: 6-DoF dynamics, world models, and
+            predictive control. Primary lab research — focused on faithful reproduction, diagnosis,
+            and robustness before any claim of contribution.
+          </p>
+          <ul class="project__meta">
+            <li>Autonomous flight</li>
+            <li>World models</li>
+            <li>Predictive control</li>
+          </ul>
+          <p class="project__note">Repository and project page to be linked once published.</p>
+        </article>
+
+        <article class="project">
+          <div class="project__top">
+            <h3 class="project__title">OrbitLab</h3>
+            <span class="status status--planned">Planned</span>
+          </div>
+          <p class="project__desc">
+            Computational astrodynamics lab: integrating gravitational dynamics faithfully and
+            measuring the trade-offs between accuracy, conservation of invariants, and numerical
+            cost. Two-body and restricted three-body problems, RK4 and symplectic integrators.
+          </p>
+          <ul class="project__meta">
+            <li>Astrodynamics</li>
+            <li>Numerical methods</li>
+            <li>Python</li>
+          </ul>
+          <p class="project__note">Educational MVP in planning. Repository to come.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== PUBLICATIONS ===================== -->
+    <section class="section section--alt" id="publications" aria-labelledby="publications-title">
+      <div class="section__head">
+        <span class="section__index">04</span>
+        <h2 class="section__title" id="publications-title">Publications</h2>
+      </div>
+      <div class="empty-state">
+        <p class="empty-state__title">No publications yet.</p>
+        <p class="empty-state__desc">
+          Published papers, preprints, submitted work, and personal technical reports will appear
+          here, clearly labelled by status. Nothing is listed before it exists.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== CV ===================== -->
+    <section class="section" id="cv" aria-labelledby="cv-title">
+      <div class="section__head">
+        <span class="section__index">05</span>
+        <h2 class="section__title" id="cv-title">CV</h2>
+      </div>
+      <div class="cv">
+        <p class="cv__text">
+          A full curriculum vitae in PDF — education, research experience, technical skills, and
+          languages — will be linked here.
+        </p>
+        <a class="btn btn--ghost" href="#" aria-disabled="true" data-placeholder="CV PDF coming soon">
+          Download CV (PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+      <div class="section__head">
+        <span class="section__index">06</span>
+        <h2 class="section__title" id="contact-title">Contact</h2>
+      </div>
+      <p class="section__intro">
+        Open to scientific research roles and research collaborations in space autonomy and
+        computational physics.
+      </p>
+      <ul class="contact">
+        <li class="contact__item">
+          <span class="contact__label">Email</span>
+          <a href="#" data-placeholder="your.email@example.com">your.email@example.com</a>
+        </li>
+        <li class="contact__item">
+          <span class="contact__label">GitHub</span>
+          <a href="#" data-placeholder="github.com/username">github.com/username</a>
+        </li>
+        <li class="contact__item">
+          <span class="contact__label">ORCID</span>
+          <a href="#" data-placeholder="orcid.org/0000-0000-0000-0000">orcid.org/0000-0000-0000-0000</a>
+        </li>
+        <li class="contact__item">
+          <span class="contact__label">LinkedIn</span>
+          <a href="#" data-placeholder="linkedin.com/in/username">linkedin.com/in/username</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> [Your Name]. Built as a static site — accessible, responsive, no tracking.</p>
+    <a href="#top" class="site-footer__top">Back to top &uarr;</a>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
