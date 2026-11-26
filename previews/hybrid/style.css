@@ -1,0 +1,208 @@
+/* Preview C — hybrid: B's layout, A's calm, with real character.
+   Warm anthracite, cream text, one bold amber accent. Serif display +
+   mono labels. Visible technical grid. No neon, no glow, no starfield. */
+:root {
+  --bg: #16130f;        /* warm near-black, not bluish */
+  --bg-2: #1c1813;
+  --panel: #211c16;
+  --line: #3a332a;
+  --line-soft: #2a241d;
+  --text: #f1ebe0;      /* cream */
+  --muted: #b3a894;
+  --faint: #857a67;
+  --accent: #e0803f;    /* burnt amber — warm, human, un-AI */
+  --accent-ink: #1a1209;
+  --maxw: 1000px;
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: 1.5rem; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.preview-banner {
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0.55rem 1rem;
+  font-weight: 500;
+}
+.preview-banner a { color: var(--accent-ink); font-weight: 700; }
+
+/* Nav */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav__inner { display: flex; align-items: center; justify-content: space-between; padding-block: 1.1rem; }
+.nav__brand { color: var(--text); font-family: var(--serif); font-weight: 600; font-size: 1.3rem; letter-spacing: -0.01em; }
+.nav__brand:hover { text-decoration: none; }
+.nav nav { display: flex; gap: 1.4rem; font-family: var(--mono); font-size: 0.85rem; }
+.nav nav a { color: var(--muted); }
+.nav nav a:hover { color: var(--accent); text-decoration: none; }
+
+/* Hero — big serif display, full presence, accent rule, no gadgets */
+.hero {
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, var(--bg-2), var(--bg));
+  position: relative;
+}
+.hero::before {
+  /* thin accent rule at the very top — a signature stroke, not a glow */
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+}
+.hero__inner { padding-block: 6rem 4.5rem; }
+.hero__kicker {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin: 0 0 1.8rem;
+}
+.hero__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.8rem;
+  max-width: 15ch;
+}
+.hero__intro { color: var(--muted); font-size: 1.2rem; max-width: 52ch; margin: 0 0 2.4rem; }
+.hero__cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.btn {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2px;              /* sharp, technical, not pill-soft */
+  border: 1px solid var(--line);
+  color: var(--text);
+  transition: transform 0.15s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.btn:hover { transform: translateY(-2px); text-decoration: none; border-color: var(--accent); color: var(--accent); }
+.btn--on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn--on:hover { background: #ef9456; color: var(--accent-ink); }
+
+/* Sections — technical grid feel */
+.sec { padding-block: 4.5rem 1rem; border-bottom: 1px solid var(--line-soft); }
+.sec:last-of-type { border-bottom: 0; }
+.sec__num {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  color: var(--faint);
+  display: block;
+  margin-bottom: 1.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line);
+}
+.lead {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 1.25;
+  margin: 0 0 1.1rem;
+  letter-spacing: -0.01em;
+  max-width: 30ch;
+}
+.muted { color: var(--muted); max-width: 64ch; margin: 0; font-size: 1.05rem; }
+
+.grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 2rem;
+  position: relative;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.card::before {
+  /* corner tick — technical drawing cue */
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 22px; height: 22px;
+  border-top: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+}
+.card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.card h3 { font-family: var(--serif); font-weight: 600; font-size: 1.5rem; margin: 0 0 0.7rem; }
+.card p { color: var(--muted); margin: 0 0 1.3rem; }
+.card p:last-child { margin-bottom: 0; }
+.card--proj .card__head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 0.7rem; }
+.card--proj .card__head h3 { margin: 0; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chips span {
+  font-family: var(--mono);
+  font-size: 0.73rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.26rem 0.6rem;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.22rem 0.6rem;
+  white-space: nowrap;
+}
+.tag--on { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
+
+.contact-lines { font-family: var(--mono); font-size: 1rem; color: var(--muted); }
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--faint);
+  padding-block: 2.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+.foot a { color: var(--faint); }
+
+@media (max-width: 640px) {
+  .nav nav { gap: 1rem; flex-wrap: wrap; }
+  .grid2 { grid-template-columns: 1fr; }
+  .hero__inner { padding-block: 4rem 3rem; }
+  .sec { padding-block: 3rem 0.5rem; }
+}
