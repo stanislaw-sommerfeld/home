@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <div class="preview-banner">
     Preview B2 — &ldquo;Observatory&rdquo; with C-style project blocks (rounded).
     <a href="../researcher/">A</a> &middot; <a href="../observatory/">B</a> &middot; <a href="../hybrid/">C</a> &middot; <a href="../researcher-pro/">Pro</a>
@@ -54,7 +55,7 @@
       </div>
     </section>
 
-    <section class="wrap sec" id="about">
+    <section class="wrap sec" id="about" data-reveal>
       <span class="sec__num">01 / About</span>
       <p class="lead">
         I work on the dynamics and control of autonomous systems, from drones to spacecraft, and
@@ -68,7 +69,7 @@
       </p>
     </section>
 
-    <section class="wrap sec" id="research">
+    <section class="wrap sec" id="research" data-reveal>
       <span class="sec__num">02 / Research</span>
       <div class="grid2">
         <article class="card">
@@ -92,29 +93,40 @@
       </div>
     </section>
 
-    <section class="wrap sec" id="projects">
-      <span class="sec__num">03 / Projects</span>
-      <div class="grid2">
-        <article class="card card--proj">
-          <div class="card__head"><h3>SkyJEPA</h3><span class="tag tag--on">In progress</span></div>
-          <p>
-            Reproduction of SkyJEPA for autonomous flight at SNU: 6-DoF dynamics, world models,
-            predictive control. A faithful, diagnosable reproduction with documented robustness
-            tests.
-          </p>
-        </article>
-        <article class="card card--proj">
-          <div class="card__head"><h3>OrbitLab</h3><span class="tag">Planned</span></div>
-          <p>
-            Computational astrodynamics: how faithfully can gravitational dynamics be integrated,
-            and what does accuracy cost in conservation and compute? Two-body, then restricted
-            three-body; RK4 against symplectic integrators.
-          </p>
-        </article>
+    <section class="wrap sec" id="projects" data-reveal>
+      <div class="carousel__head">
+        <span class="sec__num">03 / Projects</span>
+        <div class="carousel__nav">
+          <button class="carousel__btn" data-carousel-prev aria-label="Previous project">&larr;</button>
+          <button class="carousel__btn" data-carousel-next aria-label="Next project">&rarr;</button>
+        </div>
+      </div>
+
+      <div class="carousel" data-carousel>
+        <div class="carousel__track" data-carousel-track>
+          <article class="card card--proj carousel__item" data-project="skyjepa" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open SkyJEPA details">
+            <div class="card__head"><h3>SkyJEPA</h3><span class="tag tag--on">In progress</span></div>
+            <p>
+              Reproduction of SkyJEPA for autonomous flight at SNU: 6-DoF dynamics, world models,
+              predictive control. A faithful, diagnosable reproduction with documented robustness
+              tests.
+            </p>
+            <span class="card__more">Details &rarr;</span>
+          </article>
+          <article class="card card--proj carousel__item" data-project="orbitlab" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open OrbitLab details">
+            <div class="card__head"><h3>OrbitLab</h3><span class="tag">Planned</span></div>
+            <p>
+              Computational astrodynamics: how faithfully can gravitational dynamics be integrated,
+              and what does accuracy cost in conservation and compute? Two-body, then restricted
+              three-body; RK4 against symplectic integrators.
+            </p>
+            <span class="card__more">Details &rarr;</span>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="wrap sec" id="contact">
+    <section class="wrap sec" id="contact" data-reveal>
       <span class="sec__num">04 / Contact</span>
       <p class="lead">
         Available for research positions and collaborations in space autonomy and computational
@@ -132,6 +144,68 @@
     <a href="#">Back to top &uarr;</a>
   </footer>
 
-  <script>document.querySelectorAll(".year").forEach(function(e){e.textContent=new Date().getFullYear();});</script>
+  <!-- ===== Project detail modals (content drawn from the personal guide) ===== -->
+  <div class="modal" id="modal-skyjepa" role="dialog" aria-modal="true" aria-labelledby="skyjepa-h" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" data-modal-close aria-label="Close">&times;</button>
+      <span class="sec__num">P0 &middot; Primary lab research</span>
+      <h2 id="skyjepa-h" class="modal__title">SkyJEPA</h2>
+      <p class="modal__tag"><span class="tag tag--on">In progress</span></p>
+      <p class="muted">
+        Reproduction of SkyJEPA for autonomous flight: 6-DoF dynamics, world models, and
+        predictive control. The aim is a faithful, diagnosable reproduction before any claim of a
+        new result.
+      </p>
+
+      <h3 class="modal__sub">Mastery goals</h3>
+      <ul class="modal__list">
+        <li><strong>Physics</strong> — 6-DoF dynamics, rotation on SO(3), forces, moments, mass and inertia parameters, perturbations and simulation assumptions.</li>
+        <li><strong>Control</strong> — geometric and integral control, MPPI, cost function, stability, steady-state error, saturation, and the performance/cost trade-off.</li>
+        <li><strong>Learning</strong> — latent representation, action-conditioned prediction, horizon, generalization, and the limits of a world model.</li>
+      </ul>
+
+      <h3 class="modal__sub">Validation milestones</h3>
+      <ul class="modal__list">
+        <li><strong>A. Reproduction</strong> — report conditions, versions, seeds, baselines, metrics and gaps to reference results.</li>
+        <li><strong>B. Diagnosis</strong> — explain observations through the dynamics; targeted ablations on the integral action.</li>
+        <li><strong>C. Robustness</strong> — compare methods at equal budget, same initial conditions and perturbations, multiple seeds, with uncertainty intervals.</li>
+        <li><strong>D. Transmission</strong> — reproducible README, a central figure, a 3–5 page report, and a five-minute talk. Negative results kept.</li>
+      </ul>
+      <p class="modal__note">Repository and project page to be linked once published.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-orbitlab" role="dialog" aria-modal="true" aria-labelledby="orbitlab-h" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" data-modal-close aria-label="Close">&times;</button>
+      <span class="sec__num">P1 &middot; Computational Astrodynamics Lab</span>
+      <h2 id="orbitlab-h" class="modal__title">OrbitLab</h2>
+      <p class="modal__tag"><span class="tag">Planned</span> <span class="modal__budget">MVP ~30–45 h</span></p>
+      <p class="muted">
+        How faithfully can gravitational dynamics be integrated, and what does accuracy cost in
+        conservation of invariants and compute time? An educational project first.
+      </p>
+
+      <h3 class="modal__sub">Technical path</h3>
+      <ul class="modal__list">
+        <li><strong>M1 · Two-body</strong> — derive Newtonian equations and Kepler's laws; SI units and non-dimensionalization; circular and elliptical orbits against an analytical reference.</li>
+        <li><strong>M2 · Numerical methods</strong> — RK4 and velocity Verlet; compare convergence, energy and angular-momentum error, runtime and long-term stability.</li>
+        <li><strong>M3 · Three-body</strong> — restricted circular problem, rotating frame, Jacobi constant; Lagrange points and trajectories, checking the right invariants.</li>
+        <li><strong>M4 · Optional extension</strong> — transfer trajectories and differential correction, then the DMD/EDMD/Koopman literature. No neural network before the physics baselines hold.</li>
+      </ul>
+
+      <h3 class="modal__sub">MVP completion criteria</h3>
+      <p class="muted">
+        M1–M2 required: circular-orbit tests, time-step convergence, comparison to a reference,
+        invariant-drift figures over a fixed horizon, and a documented reproduction command.
+        M3–M4 are extensions.
+      </p>
+      <p class="modal__note">Repository <code>orbitlab</code> to come.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
