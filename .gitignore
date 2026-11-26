@@ -1,0 +1,12 @@
+# Private notes — never committed. Your personal, self-addressed content
+# lives here and stays off GitHub.
+NOTES.private.md
+*.private.md
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+
+# Local build / tooling artifacts
+node_modules/
+.cache/
