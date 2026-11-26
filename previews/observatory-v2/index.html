@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Your Name] — Observatory (preview B)</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="preview-banner">
+    Preview B2 — &ldquo;Observatory&rdquo; with C-style project blocks (rounded).
+    <a href="../researcher/">A</a> &middot; <a href="../observatory/">B</a> &middot; <a href="../hybrid/">C</a> &middot; <a href="../researcher-pro/">Pro</a>
+  </div>
+
+  <div class="starfield" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#"><span class="nav__dot"></span>[Your Name]</a>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <p class="hero__kicker">Space autonomy &middot; Computational physics</p>
+        <h1 class="hero__title">
+          Dynamics and control of systems that
+          <span class="grad">move on their own</span>.
+        </h1>
+        <p class="hero__intro">
+          Engineer-in-training at a French engineering school and Seoul National University, with
+          lab research in autonomous robotics. First-principles work across astrodynamics,
+          guidance and control, and the physics underneath.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--on" href="#projects">View projects</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap sec" id="about">
+      <span class="sec__num">01 / About</span>
+      <p class="lead">
+        I work on the dynamics and control of autonomous systems, from drones to spacecraft, and
+        on the physics and numerical methods beneath them.
+      </p>
+      <p class="muted">
+        My training ran through a French <em>classe préparatoire</em>, a year in the United States
+        in aerospace and modern physics, and a specialization in materials and processes before
+        the move into autonomous robotics. The projects here turn that background into working,
+        reproducible code.
+      </p>
+    </section>
+
+    <section class="wrap sec" id="research">
+      <span class="sec__num">02 / Research</span>
+      <div class="grid2">
+        <article class="card">
+          <h3>Space engineering &amp; autonomy</h3>
+          <p>
+            Orbital mechanics, guidance, navigation and control, and autonomous space robotics.
+            From a clean two-body orbit to holding a satellite's attitude under noisy sensors and
+            an uncertain model.
+          </p>
+          <div class="chips"><span>Astrodynamics</span><span>GNC</span><span>Robotics</span></div>
+        </article>
+        <article class="card">
+          <h3>Theoretical &amp; computational physics</h3>
+          <p>
+            Classical and Hamiltonian mechanics, modern physics, and the numerical methods that
+            make them computable: tracking invariants, checking convergence, treating every
+            simulation as a model.
+          </p>
+          <div class="chips"><span>Mechanics</span><span>Relativity</span><span>Sci-computing</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap sec" id="projects">
+      <span class="sec__num">03 / Projects</span>
+      <div class="grid2">
+        <article class="card card--proj">
+          <div class="card__head"><h3>SkyJEPA</h3><span class="tag tag--on">In progress</span></div>
+          <p>
+            Reproduction of SkyJEPA for autonomous flight at SNU: 6-DoF dynamics, world models,
+            predictive control. A faithful, diagnosable reproduction with documented robustness
+            tests.
+          </p>
+        </article>
+        <article class="card card--proj">
+          <div class="card__head"><h3>OrbitLab</h3><span class="tag">Planned</span></div>
+          <p>
+            Computational astrodynamics: how faithfully can gravitational dynamics be integrated,
+            and what does accuracy cost in conservation and compute? Two-body, then restricted
+            three-body; RK4 against symplectic integrators.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap sec" id="contact">
+      <span class="sec__num">04 / Contact</span>
+      <p class="lead">
+        Available for research positions and collaborations in space autonomy and computational
+        physics.
+      </p>
+      <p class="contact-lines">
+        <a href="#">email</a> &middot; <a href="#">GitHub</a> &middot;
+        <a href="#">ORCID</a> &middot; <a href="#">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <span>&copy; <span class="year"></span> [Your Name]</span>
+    <a href="#">Back to top &uarr;</a>
+  </footer>
+
+  <script>document.querySelectorAll(".year").forEach(function(e){e.textContent=new Date().getFullYear();});</script>
+</body>
+</html>
