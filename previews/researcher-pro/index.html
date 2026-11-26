@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Your Name] — Researcher Pro (preview)</title>
+  <meta name="robots" content="noindex" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="preview-banner">
+    Preview — &ldquo;Researcher Pro&rdquo;. Try the theme toggle, top right.
+    <a href="../researcher/">A</a> &middot; <a href="../observatory/">B</a> &middot; <a href="../hybrid/">C</a>
+  </div>
+
+  <header class="masthead">
+    <div class="wrap masthead__inner">
+      <a class="masthead__name" href="#top">[Your Name]</a>
+      <nav class="masthead__nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3L19 19M19 5l-1.7 1.7M6.7 17.3L5 19" />
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow">Space autonomy &amp; computational physics</p>
+      <h1 class="hero__title">
+        Dynamics and control of systems that move on their own.
+      </h1>
+      <p class="hero__intro">
+        Engineer-in-training at a French engineering school and Seoul National University, with
+        lab research in autonomous robotics. Working from first principles across astrodynamics,
+        guidance and control, and the physics underneath.
+      </p>
+      <div class="hero__links">
+        <a class="link-underline" href="#projects">View projects</a>
+        <a class="link-underline link-underline--muted" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section class="block wrap" id="about">
+      <div class="block__label"><span class="num">01</span> About</div>
+      <div class="block__body">
+        <p class="lead">
+          I work on the dynamics and control of autonomous systems, from drones to spacecraft,
+          and on the physics and numerical methods beneath them.
+        </p>
+        <p>
+          My training ran through a French <em>classe préparatoire</em>, a year in the United
+          States in aerospace and modern physics, and a specialization in materials and processes
+          before the move into autonomous robotics. The projects here turn that background into
+          working, reproducible code.
+        </p>
+      </div>
+    </section>
+
+    <section class="block wrap" id="research">
+      <div class="block__label"><span class="num">02</span> Research</div>
+      <div class="block__body">
+        <article class="pillar">
+          <h3 class="pillar__title">Space engineering &amp; autonomy</h3>
+          <p>
+            Orbital mechanics, guidance, navigation and control, and autonomous space robotics.
+            From a clean two-body orbit to holding a satellite's attitude under noisy sensors and
+            an uncertain model.
+          </p>
+        </article>
+        <article class="pillar">
+          <h3 class="pillar__title">Theoretical &amp; computational physics</h3>
+          <p>
+            Classical and Hamiltonian mechanics, modern physics, and the numerical methods that
+            make them computable: tracking invariants, checking convergence, and treating every
+            simulation as a model.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block wrap" id="projects">
+      <div class="block__label"><span class="num">03</span> Projects</div>
+      <div class="block__body">
+        <article class="entry">
+          <div class="entry__head">
+            <h3 class="entry__title">SkyJEPA</h3>
+            <span class="tag tag--on">In progress</span>
+          </div>
+          <p>
+            Reproduction of SkyJEPA for autonomous flight at SNU: 6-DoF dynamics, world models,
+            and predictive control. A faithful, diagnosable reproduction with documented
+            robustness tests.
+          </p>
+          <p class="entry__meta">Autonomous flight &middot; World models &middot; Predictive control</p>
+        </article>
+        <article class="entry">
+          <div class="entry__head">
+            <h3 class="entry__title">OrbitLab</h3>
+            <span class="tag">Planned</span>
+          </div>
+          <p>
+            Computational astrodynamics: how faithfully can gravitational dynamics be integrated,
+            and what does accuracy cost in conservation of invariants and compute? Two-body, then
+            the restricted three-body problem; RK4 against symplectic integrators.
+          </p>
+          <p class="entry__meta">Astrodynamics &middot; Numerical methods &middot; Python</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block wrap" id="contact">
+      <div class="block__label"><span class="num">04</span> Contact</div>
+      <div class="block__body">
+        <p class="lead">
+          Available for research positions and collaborations in space autonomy and computational
+          physics.
+        </p>
+        <ul class="contact">
+          <li><span class="contact__k">Email</span><a class="link-underline" href="#">your.email@example.com</a></li>
+          <li><span class="contact__k">GitHub</span><a class="link-underline" href="#">github.com/username</a></li>
+          <li><span class="contact__k">ORCID</span><a class="link-underline" href="#">orcid.org/0000-0000-0000-0000</a></li>
+          <li><span class="contact__k">LinkedIn</span><a class="link-underline" href="#">linkedin.com/in/username</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <span>&copy; <span class="year"></span> [Your Name]</span>
+    <a class="link-underline link-underline--muted" href="#top">Back to top &uarr;</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
