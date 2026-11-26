@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Your Name] — Researcher (preview A)</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="preview-banner">
+    Preview A — &ldquo;Researcher&rdquo; (editorial / minimal).
+    <a href="../observatory/">See preview B &rarr;</a>
+  </div>
+
+  <header class="masthead">
+    <div class="wrap masthead__inner">
+      <a class="masthead__name" href="#">[Your Name]</a>
+      <nav class="masthead__nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <p class="hero__kicker">Space autonomy &middot; Computational physics</p>
+      <h1 class="hero__title">
+        Dynamics and control of systems<br />
+        that move on their own.
+      </h1>
+      <p class="hero__intro">
+        Engineer-in-training at a French engineering school and Seoul National University, with
+        lab research in autonomous robotics. Working from first principles across astrodynamics,
+        guidance and control, and the physics underneath.
+      </p>
+      <div class="hero__links">
+        <a class="link-strong" href="#projects">View projects &rarr;</a>
+        <a class="link-plain" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <hr class="rule wrap" />
+
+    <section class="block wrap" id="about">
+      <div class="block__label">About</div>
+      <div class="block__body">
+        <p class="lead">
+          I work on the dynamics and control of autonomous systems, from drones to spacecraft,
+          and on the physics and numerical methods beneath them.
+        </p>
+        <p>
+          My training ran through a French <em>classe préparatoire</em>, a year in the United
+          States in aerospace and modern physics, and a specialization in materials and processes
+          before the move into autonomous robotics. The projects here turn that background into
+          working, reproducible code.
+        </p>
+      </div>
+    </section>
+
+    <hr class="rule wrap" />
+
+    <section class="block wrap" id="research">
+      <div class="block__label">Research</div>
+      <div class="block__body">
+        <div class="pillar">
+          <h3>Space engineering &amp; autonomy</h3>
+          <p>
+            Orbital mechanics, guidance, navigation and control, and autonomous space robotics.
+            From a clean two-body orbit to holding a satellite's attitude under noisy sensors and
+            an uncertain model.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>Theoretical &amp; computational physics</h3>
+          <p>
+            Classical and Hamiltonian mechanics, modern physics, and the numerical methods that
+            make them computable: tracking invariants, checking convergence, treating every
+            simulation as a model.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule wrap" />
+
+    <section class="block wrap" id="projects">
+      <div class="block__label">Projects</div>
+      <div class="block__body">
+        <article class="entry">
+          <div class="entry__head">
+            <h3>SkyJEPA</h3>
+            <span class="tag tag--on">In progress</span>
+          </div>
+          <p>
+            Reproduction of SkyJEPA for autonomous flight at SNU: 6-DoF dynamics, world models,
+            predictive control. A faithful, diagnosable reproduction with documented robustness
+            tests.
+          </p>
+        </article>
+        <article class="entry">
+          <div class="entry__head">
+            <h3>OrbitLab</h3>
+            <span class="tag">Planned</span>
+          </div>
+          <p>
+            Computational astrodynamics: how faithfully can gravitational dynamics be integrated,
+            and what does accuracy cost in conservation and compute? Two-body, then restricted
+            three-body; RK4 against symplectic integrators.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <hr class="rule wrap" />
+
+    <section class="block wrap" id="contact">
+      <div class="block__label">Contact</div>
+      <div class="block__body">
+        <p class="lead">
+          Available for research positions and collaborations in space autonomy and computational
+          physics.
+        </p>
+        <p class="contact-lines">
+          <a href="#">email</a> &middot; <a href="#">GitHub</a> &middot;
+          <a href="#">ORCID</a> &middot; <a href="#">LinkedIn</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <span>&copy; <span class="year"></span> [Your Name]</span>
+    <a href="#">Back to top &uarr;</a>
+  </footer>
+
+  <script>document.querySelectorAll(".year").forEach(function(e){e.textContent=new Date().getFullYear();});</script>
+</body>
+</html>
